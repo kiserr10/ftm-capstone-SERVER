@@ -1,4 +1,3 @@
-
 exports.up = function(knex, Promise) {
 	return knex.schema.createTable('market_product', (table) =>{
 		table.increments('id').primary();
