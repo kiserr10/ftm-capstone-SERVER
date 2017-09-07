@@ -1,5 +1,5 @@
 exports.seed = function(knex, Promise) {
-	return knex('account').del()
+	return knex.raw('TRUNCATE account CASCADE; ALTER SEQUENCE account_id_seq restart with 6')
 		.then(function () {
 			return knex('account').insert([
 				{
