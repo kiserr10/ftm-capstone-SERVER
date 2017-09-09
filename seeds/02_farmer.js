@@ -13,16 +13,32 @@ exports.seed = function(knex, Promise) {
 				{
 					id: 2,
 					account_id: 4,
-					biography: 'For over two decades Waller Farms has been at the pinnacle of carrot harvesting.',
+					biography: 'For over two decades Holter Farms has been at the pinnacle of carrot harvesting.',
 					farm_name: 'Holter Farms',
 					image_url: 'http://images.all-free-download.com/images/graphicthumb/tomato_plant_red_218370.jpg',
-					rating: 10
+					rating: 4.8
 				},
 				{
 					id: 3,
 					account_id: 3,
-					biography: 'For over two decades Waller Farms has been at the pinnacle of lettuce harvesting.',
+					biography: 'For over two decades Deere Farms has been at the pinnacle of lettuce harvesting.',
 					farm_name: 'Deere Farms',
+					image_url: 'http://images.all-free-download.com/images/graphicthumb/tomato_plant_red_218370.jpg',
+					rating: 8.6
+				},
+				{
+					id: 4,
+					account_id: 5,
+					biography: 'For over six decades Teller Farms has been at the pinnacle of nut harvesting.',
+					farm_name: 'Teller Farms',
+					image_url: 'http://images.all-free-download.com/images/graphicthumb/tomato_plant_red_218370.jpg',
+					rating: 8
+				},
+				{
+					id: 5,
+					account_id: 1,
+					biography: 'For over three decades Kiser Farms has been at the pinnacle of beet harvesting.',
+					farm_name: 'Kiser Farms',
 					image_url: 'http://images.all-free-download.com/images/graphicthumb/tomato_plant_red_218370.jpg',
 					rating: 10
 				}

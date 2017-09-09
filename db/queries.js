@@ -1,6 +1,5 @@
 const knex = require('./knex'); // the connection! do this for all files where queries take place!!
 
-
 module.exports = {
 
 	getAllFarmers(){
@@ -10,6 +9,5 @@ module.exports = {
 	getOneFarmer(id){
 		return knex('farmer').where('id', id).first();
 	}
-
 
 };

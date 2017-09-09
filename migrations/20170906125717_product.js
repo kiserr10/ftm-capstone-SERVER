@@ -5,8 +5,6 @@ exports.up = function(knex, Promise) {
 		table.text('name').notNull();
 		table.text('description').notNull();
 		table.text('image_url').notNull();
-		table.text('growing_location').notNull();
-		table.float('rating').unsigned();
 	});
 };
 

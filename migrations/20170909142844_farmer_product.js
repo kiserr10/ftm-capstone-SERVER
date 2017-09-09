@@ -6,7 +6,8 @@ exports.up = function(knex, Promise) {
 		table.integer('product_id').unsigned();
 		table.foreign('product_id').references('id').inTable('product').onDelete('cascade');
 		table.integer('quantity').notNull();
-		table.float('rating');
+		table.float('rating').unsigned();
+		table.text('growing_location').notNull();
 	});
 };
 
