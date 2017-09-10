@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const farmers = require('./api/farmers');
 const markets = require('./api/markets');
+const accounts = require('./api/accounts');
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(cookieParser());
 
 app.use('/api/v1/farmers', farmers);
 app.use('/api/v1/markets', markets);
+app.use('/api/v1/accounts', accounts);
 
 
 // catch 404 and forward to error handler
