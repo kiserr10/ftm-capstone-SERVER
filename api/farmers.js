@@ -6,7 +6,7 @@ const knex = require('../db/knex');
 router.get('/', function(req, res, next) {
 	Farmer
 		.query()
-		.eager('products')
+		.eager('[products, markets]')
 		.then(farmers => {
 			res.json(farmers);
 		});
