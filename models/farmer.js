@@ -14,6 +14,7 @@ class Farmer extends Model {
 					from: 'farmer.id',
 					through: {
 						from: 'farmer_product.farmer_id',
+						extra: ['quantity', 'rating', 'growing_location'],
 						to: 'farmer_product.product_id'
 					},
 					to: 'product.id'
@@ -26,6 +27,7 @@ class Farmer extends Model {
 					from: 'farmer.id',
 					through: {
 						from: 'farmer_market.farmer_id',
+						extra: ['attend_date'],
 						to: 'farmer_market.market_id'
 					},
 					to: 'market.id'

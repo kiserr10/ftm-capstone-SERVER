@@ -5,6 +5,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const farmers = require('./api/farmers');
+const markets = require('./api/markets');
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/api/v1/farmers', farmers);
+app.use('/api/v1/markets', markets);
 
 
 // catch 404 and forward to error handler

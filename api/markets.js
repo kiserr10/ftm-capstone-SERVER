@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const Farmer = require('../models/Farmer');
+const Market = require('../models/Market');
 const knex = require('../db/knex');
 
 router.get('/', function(req, res, next) {
-	Farmer
+	Market
 		.query()
-		.eager('[products, markets]')
-		.then(farmers => {
-			res.json(farmers);
+		.eager('[farmers]')
+		.then(markets => {
+			res.json(markets);
 		});
 });
 

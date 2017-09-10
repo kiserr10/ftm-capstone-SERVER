@@ -1,7 +1,6 @@
 const { Model } = require('objection');
 
 class Market extends Model {
-
 	static get tableName() {
 		return 'market';
 	}
@@ -15,11 +14,12 @@ class Market extends Model {
 					from: 'market.id',
 					through: {
 						from: 'farmer_market.market_id',
+						extra: ['attend_date'],
 						to: 'farmer_market.farmer_id'
 					},
 					to: 'farmer.id'
 				}
-			}
+			},
 		};
 	}
 }
