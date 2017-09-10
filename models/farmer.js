@@ -32,6 +32,14 @@ class Farmer extends Model {
 					},
 					to: 'market.id'
 				}
+			},
+			account: {
+				relation: Model.BelongsToOneRelation,
+				modelClass: __dirname + '/Account',
+				join: {
+					from: 'account.id',
+					to: 'farmer.account_id'
+				}
 			}
 		};
 	}

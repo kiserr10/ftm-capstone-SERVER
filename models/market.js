@@ -19,7 +19,7 @@ class Market extends Model {
 					},
 					to: 'farmer.id'
 				}
-			},
+			}
 		};
 	}
 }
