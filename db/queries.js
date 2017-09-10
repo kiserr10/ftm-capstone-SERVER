@@ -1,4 +1,5 @@
 const knex = require('./knex'); // the connection! do this for all files where queries take place!!
+const Farmer = require('../models/farmer');
 
 module.exports = {
 
