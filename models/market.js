@@ -19,6 +19,18 @@ class Market extends Model {
 					},
 					to: 'farmer.id'
 				}
+			},
+			farmer_product: {
+				relation: Model.ManyToManyRelation,
+				modelClass: __dirname + '/Farmer_Product',
+				join: {
+					from: 'market.id',
+					through: {
+						from: 'farmer_product_market.market_id',
+						to: 'farmer_product_market.farmer_product_id'
+					},
+					to: 'farmer_product.id'
+				}
 			}
 		};
 	}

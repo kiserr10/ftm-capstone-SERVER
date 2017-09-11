@@ -12,6 +12,16 @@ router.get('/', function(req, res, next) {
 		});
 });
 
+router.get('/:id', function(req, res, next) {
+	Farmer
+		.query()
+		.findById(req.params.id)
+		.eager('[account, products, markets]')
+		.then(farmers => {
+			res.json(farmers);
+		});
+});
+
 
 
 

@@ -11,6 +11,15 @@ router.get('/', function(req, res, next) {
 			res.json(accounts);
 		});
 });
+router.get('/:id', function(req, res, next) {
+	Account
+		.query()
+		.findById(req.params.id)
+		.eager()
+		.then(accounts => {
+			res.json(accounts);
+		});
+});
 
 
 
