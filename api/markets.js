@@ -6,7 +6,7 @@ const knex = require('../db/knex');
 router.get('/', function(req, res, next) {
 	Market
 		.query()
-		.eager('[farmers, farmer_product]')
+		.eager('[farmers, farmer_products, farmer_products.product]')
 		.then(markets => {
 			res.json(markets);
 		});
@@ -15,14 +15,11 @@ router.get('/:id', function(req, res, next) {
 	Market
 		.query()
 		.findById(req.parmas.id)
-		.eager('[farmers, farmer_product]')
+		.eager('[farmers, products]')
 		.then(markets => {
 			res.json(markets);
 		});
 });
-
-
-
 
 
 

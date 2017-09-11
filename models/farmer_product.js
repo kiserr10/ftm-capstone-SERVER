@@ -18,7 +18,15 @@ class FarmerProduct extends Model {
 					},
 					to: 'market.id'
 				}
-			}
+			},
+			product: {
+				relation: Model.BelongsToOneRelation,
+				modelClass: __dirname + '/Product',
+				join: {
+					from: 'farmer_product.product_id',
+					to: 'product.id'
+				}
+			},
 		};
 	}
 }

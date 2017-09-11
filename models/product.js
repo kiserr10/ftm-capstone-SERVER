@@ -19,6 +19,14 @@ class Product extends Model {
 					},
 					to: 'farmer.id'
 				}
+			},
+			farmer_product: {
+				relation: Model.HasManyRelation,
+				modelClass: __dirname + '/Farmer_Product',
+				join: {
+					from: 'product.id',
+					to: 'farmer_product.product_id'
+				}
 			}
 		};
 	}

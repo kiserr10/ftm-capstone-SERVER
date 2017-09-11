@@ -20,7 +20,7 @@ class Market extends Model {
 					to: 'farmer.id'
 				}
 			},
-			farmer_product: {
+			farmer_products: {
 				relation: Model.ManyToManyRelation,
 				modelClass: __dirname + '/Farmer_Product',
 				join: {
