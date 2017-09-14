@@ -86,7 +86,7 @@ router.post('/signup', (req, res, next) => {
 			}
 		});
 	} else {
-		next(new Error("Invalid User"));
+		next(new Error("Invalid Password or Email"));
 	}
 });
 
