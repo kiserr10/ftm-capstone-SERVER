@@ -14,8 +14,8 @@ router.get('/', function(req, res, next) {
 router.get('/:id', function(req, res, next) {
 	Market
 		.query()
-		.findById(req.parmas.id)
-		.eager('[farmers, products]')
+		.findById(req.params.id)
+		.eager('[farmers, farmer_products, farmer_products.product]')
 		.then(markets => {
 			res.json(markets);
 		});
