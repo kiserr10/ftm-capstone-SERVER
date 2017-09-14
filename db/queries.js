@@ -6,9 +6,7 @@ module.exports = {
 	getAllFarmers(){
 		return knex('farmer');
 	},
-
 	getOneFarmer(id){
 		return knex('farmer').where('id', id).first();
 	}
-
 };

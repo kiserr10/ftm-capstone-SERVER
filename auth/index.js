@@ -42,11 +42,11 @@ function validPassword(userPassword) {
 	}
 }
 
-router.get('/', (req, res) => {
-	res.json({
-		message: "Endpoint Works"
-	});
-});
+// router.get('/', (req, res) => {
+// 	res.json({
+// 		message: "Endpoint Works"
+// 	});
+// });
 
 //SIGNUP
 router.post('/signup', (req, res, next) => {
@@ -76,13 +76,13 @@ router.post('/signup', (req, res, next) => {
 								id,
 								email: account.email,
 								token,
-								message: "New Account Created"
+								message: "You Have Sucussefully Created A New Account"
 							});
 						});
 					});
 				});
 			} else {
-				next(new Error("Email is already in use"));
+				next(new Error("Email already in use"));
 			}
 		});
 	} else {
@@ -110,7 +110,7 @@ router.post('/login', (req, res, next) => {
 							res.json({
 								id: account.id,
 								token,
-								message: "Logged In"
+								message: "You Are Sucessfully Logged In"
 							});
 						});
 					} else {
