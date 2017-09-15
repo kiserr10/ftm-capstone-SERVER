@@ -42,12 +42,6 @@ function validPassword(userPassword) {
 	}
 }
 
-// router.get('/', (req, res) => {
-// 	res.json({
-// 		message: "Endpoint Works"
-// 	});
-// });
-
 //SIGNUP
 router.post('/signup', (req, res, next) => {
 	if(isUserValid(req.body)) {
