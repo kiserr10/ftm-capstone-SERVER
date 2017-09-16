@@ -1,5 +1,5 @@
 exports.seed = function(knex, Promise) {
-	return knex.raw('TRUNCATE farmer CASCADE; ALTER SEQUENCE farmer_id_seq restart with 4')
+	return knex.raw('TRUNCATE farmer CASCADE; ALTER SEQUENCE farmer_id_seq restart with 6')
 		.then(function () {
 			return knex('farmer').insert([
 				{

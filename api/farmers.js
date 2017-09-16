@@ -22,6 +22,17 @@ router.get('/:id', function(req, res, next) {
 		});
 });
 
+router.post('/', (req, res) =>{
+	const options = {
+		relate: true,
+		unrelate: true
+	};
+	Farmer
+		.query()
+		.upsertGraph(req.body, options)
+		.then(result => res.json(result));
+});
+
 
 
 
