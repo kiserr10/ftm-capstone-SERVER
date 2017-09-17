@@ -9,7 +9,7 @@ exports.seed = function(knex, Promise) {
 					first_name: 'Ross',
 					last_name: 'Kiser',
 					email: 'kiserr10@gmail.com',
-					password: bcrypt.hashSync('Password123', 8)
+					password: bcrypt.hashSync('Password123!', 8)
 				},
 				{
 					id: 2,
