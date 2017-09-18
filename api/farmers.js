@@ -30,7 +30,8 @@ router.post('/', (req, res) =>{
 	Farmer
 		.query()
 		.upsertGraph(req.body, options)
-		.then(result => res.json(result));
+		.then(result => res.json(result)
+		);
 });
 
 
