@@ -27,14 +27,14 @@ class FarmerProduct extends Model {
 					to: 'product.id'
 				}
 			},
-			farmer: {
-				relation: Model.BelongsToOneRelation,
-				modelClass: __dirname + '/Farmer',
-				join: {
-					from: 'farmer_product.farmer_id',
-					to: 'farmer.id'
-				}
-			},
+			// farmer: {
+			// 	relation: Model.BelongsToOneRelation,
+			// 	modelClass: __dirname + '/Farmer',
+			// 	join: {
+			// 		from: 'farmer_product.farmer_id',
+			// 		to: 'farmer.id'
+			// 	}
+			// },
 		};
 	}
 }
